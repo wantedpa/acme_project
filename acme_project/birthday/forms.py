@@ -1,9 +1,9 @@
 # birthday/forms.py
 from django import forms
+from django.core.exceptions import ValidationError
 
 # Импортируем класс модели Birthday.
 from .models import Birthday
-from django.core.exceptions import ValidationError
 
 BEATLES = {'Джон Леннон', 'Пол Маккартни', 'Джордж Харрисон', 'Ринго Старр'}
 # Для использования формы с моделями меняем класс на forms.ModelForm.
