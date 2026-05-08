@@ -8,6 +8,16 @@ DEBUG = True
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails' 
+
+LOGIN_REDIRECT_URL = 'pages:homepage'
+
+LOGIN_URL = 'login'
+
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
@@ -20,6 +30,7 @@ INSTALLED_APPS = [
     'birthday.apps.BirthdayConfig',
     'pages.apps.PagesConfig',
     'django_bootstrap5',
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
