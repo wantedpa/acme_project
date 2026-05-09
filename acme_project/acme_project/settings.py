@@ -18,7 +18,12 @@ LOGIN_REDIRECT_URL = 'pages:homepage'
 
 LOGIN_URL = 'login'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1'
+]
+
+CSRF_FAILURE_VIEW = 'core.views.csrf_failure' 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -30,7 +35,8 @@ INSTALLED_APPS = [
     'birthday.apps.BirthdayConfig',
     'pages.apps.PagesConfig',
     'django_bootstrap5',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
