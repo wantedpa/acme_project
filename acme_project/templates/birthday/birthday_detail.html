@@ -4,10 +4,10 @@
 {% block content %}
   ID записи: {{ object.id }}
   <hr>
-  {% if birthday.image %}
+  {% if object.image %}
     <div>
       <!-- Картинку сделаем побольше, чем на странице list/: высотой 200px -->
-      <img src="{{ birthday.image.url }}" height="200">
+      <img src="{{ object.image.url }}" height="200">
     </div>
   {% endif %}
    <h2>Привет, {{ object.first_name }} {{ object.last_name }}</h2>      
